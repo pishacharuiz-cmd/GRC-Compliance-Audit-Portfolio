@@ -56,4 +56,6 @@ During verification of the Eramba dashboard, the status badge for **IC-343** dis
 ### 🛠️ Remediation Steps Taken:
 1. **Executed the Test:** Simulated the reconciliation process utilizing a custom validation spreadsheet tracking user roles against the authorized matrix.
 2. **Logged the Audit Trail:** Navigated to the Eramba Audits log sub-menu, generated a fresh audit record, established valid testing dates, and set the final status to **Passed**.
+
+![Eramba Framework Filter](screenshots/01_compliance_framework_filter.png)
 3. **Attached Evidence:** Linked the completed audit spreadsheets to the record to permanently resolve the system's "Missing Evidence" requirement, automatically returning the global control health status to green/compliant.
