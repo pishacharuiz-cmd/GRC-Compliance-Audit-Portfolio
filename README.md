@@ -1,61 +1,126 @@
-# Enterprise GRC Audit Workflow & Framework Mapping Portfolio
+# GRC Compliance & Audit Portfolio
 
-## 📌 Project Overview
-This project serves as a practical, hands-on demonstration of Governance, Risk, and Compliance (GRC) analyst workflows using the industry-standard **Eramba GRC Platform**. 
+## Project Overview
 
-The core objective of this project is to simulate a real-world internal audit lifecycle: translating high-level regulatory compliance requirements down into specific, testable internal controls, executing user entitlement reviews, and maintaining an audit-ready posture for enterprise-scale software environments.
+This project demonstrates hands-on GRC and internal audit work using the **Eramba GRC Platform**. The focus is on taking a security risk, mapping it to applicable controls, collecting evidence, testing the control, and documenting the result.
 
-### 🔍 Key Competencies Demonstrated:
-* **Compliance Framework Mapping:** Navigating and filtering compliance criteria libraries (CIS Controls v8 and ISO 27001:2022).
-* **Internal Control Operationalization:** Utilizing Eramba to manage Control ID `IC-343` (Banking & Accounting Software Account Reviews) targeting Segregation of Duties (SoD) risks.
-* **Audit Lifecycle Management:** Diagnosing expired controls, establishing continuous evidence collection workflows, and generating executive audit trails.
-* **Evidence Validation:** Developing technical checking templates to audit system logs, access matrices, and change requests.
+The project is designed to reflect the type of work a GRC analyst may support during access reviews, internal audits, and compliance activities.
 
----
-
-## 🎯 1. Scenario & Risk Analysis
-* **System in Scope:** Enterprise ERP (SAP Production Database) and Corporate Banking Portals.
-* **The Risk Profile:** High-risk profiles (specifically global administrative permissions like `SAP_ALL`) being inappropriately assigned or left active on standard business user accounts. This creates severe **Segregation of Duties (SoD)** violations and opens the organization up to financial fraud or unauthorized data modification.
+### Skills Demonstrated
+- Control and framework mapping
+- Access review and Segregation of Duties (SoD) analysis
+- Audit evidence collection and validation
+- Control testing and documentation
+- GRC platform workflows using Eramba
+- Basic risk and remediation tracking
+- Audit readiness and evidence management
 
 ---
 
-## 🛡️ 2. Regulatory Alignment & Framework Filtering
-To address this risk, the first objective was to map it back to recognized global security frameworks within Eramba to ensure regulatory alignment. 
-* **Framework Library Used:** CIS Controls v8 / ISO 27002:2022.
-* **Target Security Controls:**
-  * **CIS Item 6.8:** Define and Maintain Role-Based Access Control (RBAC).
-  * **CIS Item 6.2:** Establish an Access Revocation Process.
+## 1. Scenario & Risk
 
-*Analyst Note: By filtering the framework library for "Access," we successfully isolated the exact compliance mandates required to justify our internal security workflows.*
+**Systems in scope:** SAP production environment and corporate banking applications.
 
----
+The scenario focuses on users who have elevated permissions, such as `SAP_ALL`, when those permissions are not appropriate for their job responsibilities.
 
-## ⚙️ 3. Internal Control Definition (Control ID: IC-343)
-Moving from the passive rulebook to active operations, I managed **Control ID IC-343: Banking & Accounting Software Account Reviews**. 
+This can create access-control and SoD risks, including unauthorized transactions, inappropriate changes, or excessive access to financial systems.
 
-Per the system definition, the exact repeatable internal audit procedure consists of:
-
-### 📥 A. Evidence Gathering
-* Extract the authorized system **Access Matrix**.
-* Gather active **System User Logs/Screenshots** directly from the target environments (e.g., SAP transaction code `RSUSR002`).
-* Pull all approved **Change Requests** and provisioning tickets generated since the last audit cycle.
-
-### 🔍 B. Technical Analysis
-* Cross-reference every active system account against the master Access Matrix to detect "ghost accounts" or unapproved privilege escalations.
-* Validate that all modifications to permissions correlate directly to an authorized, approved Change Request ticket following the corporate change management policy.
-
-### 📤 C. Required Outputs
-* System evidence screenshots.
-* Completed reconciliation spreadsheets verifying each active account and change request history.
+As part of the review, the goal is to identify exceptions, validate whether access is approved, and document any issues that require remediation.
 
 ---
 
-## 🔍 4. Audit Execution & Remediation Workflow
-During verification of the Eramba dashboard, the status badge for **IC-343** displayed a critical warning: **`Last Audit Expired`** and **`Missing Evidence`**. This indicates that while the safeguard is defined, active validation has lapsed.
+## 2. Framework & Control Mapping
 
-### 🛠️ Remediation Steps Taken:
-1. **Executed the Test:** Simulated the reconciliation process utilizing a custom validation spreadsheet tracking user roles against the authorized matrix.
-2. **Logged the Audit Trail:** Navigated to the Eramba Audits log sub-menu, generated a fresh audit record, established valid testing dates, and set the final status to **Passed**.
+The risk was mapped to applicable access-control requirements using:
+
+- **CIS Controls v8**
+- **ISO/IEC 27002:2022**
+
+Relevant controls reviewed included:
+
+- **CIS 6.8:** Define and Maintain Role-Based Access Control (RBAC)
+- **CIS 6.2:** Establish an Access Revocation Process
+
+The mapping provides a basis for connecting the business risk to specific security-control requirements.
+
+---
+
+## 3. Internal Control: IC-343
+
+**Control:** Banking & Accounting Software Account Reviews
+
+The control is intended to verify that user access to financial applications is appropriate, approved, and periodically reviewed.
+
+### Evidence Reviewed
+
+- Authorized user access matrix
+- Active system user information
+- Screenshots from the SAP environment, including `RSUSR002`
+- Approved access or change requests
+
+### Testing Approach
+
+1. Compare active accounts against the authorized access matrix.
+2. Identify users with excessive, inactive, or unapproved access.
+3. Review supporting change or provisioning requests.
+4. Confirm that access changes were approved and documented.
+5. Record exceptions and determine whether follow-up is needed.
+
+### Expected Result
+
+Each active account should have an appropriate role, an identified business owner, and supporting approval where required.
+
+---
+
+## 4. Audit Execution
+
+During the exercise, the Eramba control record showed **Last Audit Expired** and **Missing Evidence**.
+
+I worked through the audit workflow by:
+
+1. Reviewing the control and its evidence requirements.
+2. Performing the access reconciliation using the supporting spreadsheet.
+3. Documenting the audit activity in Eramba.
+4. Recording the test result and audit dates.
+5. Attaching the supporting evidence to the audit record.
+
+This demonstrates the basic workflow from control review through evidence validation and audit documentation.
 
 ![Eramba Framework Filter](screenshots/01_compliance_framework_filter.png)
-3. **Attached Evidence:** Linked the completed audit spreadsheets to the record to permanently resolve the system's "Missing Evidence" requirement, automatically returning the global control health status to green/compliant.
+
+---
+
+## 5. Finding & Remediation Example
+
+A potential finding from this type of review would be an active privileged account that does not match the approved access matrix or lacks supporting approval.
+
+A typical remediation record would capture:
+
+- Finding description
+- Affected system/account
+- Risk or control impact
+- Assigned owner
+- Recommended corrective action
+- Target completion date
+- Remediation status
+- Retest result
+
+The purpose is to make the issue traceable from identification through corrective action and validation.
+
+---
+
+## 6. Portfolio Artifacts
+
+- Eramba GRC screenshots
+- Access review checklist
+- Audit evidence examples
+- Control and framework mapping
+- Access reconciliation workflow
+
+> **Note:** The systems, accounts, evidence, and audit results in this portfolio are simulated for learning and portfolio purposes. They do not represent access to or testing of a real production environment.
+
+---
+
+## What This Project Shows
+
+This project demonstrates how I approach a GRC task at the analyst level: understand the risk, identify the relevant control, gather and validate evidence, perform the review, document the result, and follow up on exceptions.
