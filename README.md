@@ -1,16 +1,16 @@
 # GRC Compliance & Audit Portfolio
 
-> **Hands-on GRC / internal audit simulation using Eramba, access-control testing, evidence validation, and remediation tracking.**
+> **Hands-on GRC / internal audit simulation using Eramba, access-control testing, evidence validation, ticket routing, and remediation tracking.**
 
 ## Executive Summary
 
-This project demonstrates an analyst-level GRC workflow from **risk identification through control testing and remediation**.
+This project demonstrates an analyst-level GRC workflow from **risk identification through control testing, issue coordination, and remediation follow-up**.
 
-I built the exercise around a simulated financial-systems access review and used **Eramba** to document the control and audit workflow. The project combines manual evidence review with spreadsheet-based access reconciliation and framework mapping.
+I built the exercise around a simulated financial-systems access review and used **Eramba** to document the control, audit, and issue-management workflow. The project combines manual evidence review with spreadsheet-based access reconciliation, framework mapping, and a ticket lifecycle exercise.
 
 **Core workflow:**
 
-**Risk → Control → Evidence → Test → Finding → Remediation → Retest → Evidence**
+**Risk → Control → Evidence → Test → Finding → Ticket → Assignment → Response → Remediation → Retest**
 
 The environment is intentionally simulated for portfolio purposes; no real production systems, accounts, or confidential evidence were used.
 
@@ -26,6 +26,10 @@ The environment is intentionally simulated for portfolio purposes; no real produ
 - Control testing
 - Exception identification
 - Audit documentation
+- Creating and documenting an issue/ticket
+- Routing an issue to the appropriate department or responsible team
+- Tracking ticket status and follow-up
+- Reviewing and documenting the response
 - Risk and remediation tracking
 - Eramba GRC workflow
 - Audit readiness and evidence management
@@ -145,6 +149,20 @@ The exercise included:
 
 ---
 
+## Eramba Ticket & Issue-Management Workflow
+
+In addition to documenting the control and audit activity, I worked through the issue follow-up process in Eramba. The exercise covered the ticket from creation through routing and response tracking:
+
+1. **Create the ticket:** Record the identified issue and provide the relevant context.
+2. **Route the issue:** Send or assign the ticket to the appropriate department or responsible team for action.
+3. **Track the ticket:** Monitor its status rather than treating submission as completion.
+4. **Review the response:** Receive and review the department's response, then document the communication and any required follow-up.
+5. **Follow through:** Keep the issue traceable until the response and corrective-action status can be evaluated and the next step is documented.
+
+This part of the lab demonstrates practical issue-management skills: creating a traceable record, directing work to the appropriate owner, coordinating follow-up, and maintaining documentation of the response. **Ticket creation and routing are not the same as verifying that a control deficiency has been fully remediated**; closure should be supported by the required evidence and validation.
+
+---
+
 ## Sample Finding & Remediation Workflow
 
 The following is a **simulated finding example** showing how an exception would be documented. It is not presented as a real production finding.
@@ -169,9 +187,9 @@ The following is a **simulated finding example** showing how an exception would 
 
 ### Remediation Lifecycle
 
-**Identify → Assign → Correct → Document → Retest → Close**
+**Identify → Create Ticket → Assign Owner → Receive Response → Correct → Document → Retest → Close**
 
-This demonstrates that a GRC analyst does more than identify an exception: the issue should remain traceable through corrective action and validation.
+A GRC analyst's work does not stop at identifying an exception or sending a ticket. The issue must remain traceable through ownership, communication, corrective action, and validation.
 
 ---
 
@@ -189,19 +207,27 @@ The spreadsheet supports the comparison between active access and approved acces
 
 This project reflects the way I approach a GRC task:
 
-> **Assess → Verify → Remediate → Document**
+> **Assess → Verify → Coordinate → Track → Document**
 
 ### Assess
+
 Understand the business process, risk, system, and control objective.
 
 ### Verify
+
 Collect evidence and test whether the control is operating as intended.
 
-### Remediate
-Identify exceptions, determine the appropriate corrective action, and track ownership.
+### Coordinate
+
+Create a traceable issue record, route it to the appropriate owner or department, and review the response.
+
+### Track
+
+Monitor the issue and document follow-up until corrective action can be evaluated.
 
 ### Document
-Maintain an auditable record of the test, evidence, finding, remediation, and retest.
+
+Maintain an auditable record of the test, evidence, finding, ticket activity, remediation, and retest.
 
 ---
 
@@ -210,6 +236,7 @@ Maintain an auditable record of the test, evidence, finding, remediation, and re
 **GRC:** Eramba  
 **Access Management:** RBAC, privileged access, access reviews, SoD  
 **Audit:** Control testing, evidence validation, exception tracking  
+**Issue Management:** Ticket creation, assignment/routing, response tracking, follow-up  
 **Frameworks:** CIS Controls v8, ISO/IEC 27002:2022  
 **Documentation:** Audit records, evidence, findings, remediation tracking  
 **Analysis:** Spreadsheet-based access reconciliation
@@ -222,9 +249,9 @@ The goal of this portfolio is not to demonstrate that I can simply navigate a GR
 
 It demonstrates that I understand the relationship between:
 
-**Business Risk → Control Objective → Evidence → Testing → Exception → Remediation → Validation**
+**Business Risk → Control Objective → Evidence → Testing → Exception → Ticket Ownership → Remediation → Validation**
 
-Eramba is the platform used to document the workflow; the underlying skill is understanding **why the control exists, what evidence proves it is working, how exceptions are evaluated, and how remediation is tracked to closure**.
+Eramba is the platform used to document the workflow; the underlying skill is understanding **why the control exists, what evidence proves it is working, how exceptions are evaluated, how issues are routed and followed up, and how remediation is validated**.
 
 ---
 
@@ -240,5 +267,4 @@ This project does not represent access to, testing of, or audit work performed a
 
 If asked to explain this project:
 
-> “I built a simulated GRC audit using Eramba around financial-system access reviews. I defined the control objective, mapped the risk to CIS and ISO requirements, reviewed simulated evidence, reconciled user access against an approved matrix, documented the audit workflow in Eramba, and built out the finding and remediation lifecycle. It was a portfolio environment rather than a production client environment, but it gave me hands-on experience with the way a GRC analyst connects risk, controls, evidence, testing, and remediation.”
-
+> “I built a simulated GRC audit using Eramba around financial-system access reviews. I defined the control objective, mapped the risk to CIS and ISO requirements, reviewed simulated evidence, reconciled user access against an approved matrix, and documented the audit workflow in Eramba. I also worked through the issue-management lifecycle: creating a ticket, routing it to the appropriate department, tracking it, reviewing the response, and documenting follow-up. It was a portfolio lab rather than production client work, but it gave me hands-on practice with how a GRC analyst connects risk, controls, evidence, testing, issue coordination, and remediation tracking.”
